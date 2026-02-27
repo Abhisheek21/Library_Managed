@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZCITCIT_TABLE_007BLE",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZCITCIT_TABLE_007BLE",
+  "sapObjectType": "ZCITCIT_TABLE_007BLE",
+  "rootNode": true
+}

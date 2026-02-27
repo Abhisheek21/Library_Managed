@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZCITC_CIT_TABLE_007BLE'
+@MappingRole: true
+define role ZCITC_CIT_TABLE_007BLE {
+  grant select on ZCITC_CIT_TABLE_007BLE
+  where INHERITING CONDITIONS FROM ENTITY ZCITR_CIT_TABLE_007BLE REPLACING { ROOT WITH _BaseEntity };
+}

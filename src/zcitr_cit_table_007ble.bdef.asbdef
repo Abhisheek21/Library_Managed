@@ -1,0 +1,53 @@
+managed implementation in class ZCITBP_R_CIT_TABLE_007BLE unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZCITR_CIT_TABLE_007BLE alias ZcitrCitTable007ble
+persistent table ZCIT_TABLE_007
+extensible
+draft table ZCITCT_TBLE_DBLE
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   BookID;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   BookID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZCIT_TABLE_007 corresponding extensible
+  {
+    BookID = BOOK_ID;
+    BookName = BOOK_NAME;
+    Genre = GENRE;
+    BookAuthor = BOOK_AUTHOR;
+    CukyField = CUKY_FIELD;
+    Price = PRICE;
+    CurrencyCode = CURRENCY_CODE;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

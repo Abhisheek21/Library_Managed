@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZCITC_CIT_TABLE_007BLE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZCITC_CIT_TABLE_007BLE'
+  }
+}
+define service ZCITUI_CIT_TABLE_007_O4BLE provider contracts odata_v4_ui {
+  expose ZCITC_CIT_TABLE_007BLE;
+}
